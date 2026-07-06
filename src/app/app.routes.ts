@@ -1,3 +1,7 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { TestPrimeng } from './test-primeng/test-primeng';
+
+export const routes: Routes = [
+  { path: '', component: TestPrimeng },
+];

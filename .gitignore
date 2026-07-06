@@ -38,6 +38,11 @@ testem.log
 .env
 .env.*
 
+# Environment
+.env
+.env.*
+src/environments/environment.local.ts
+
 # Test / coverage
 /coverage
 __screenshots__/

@@ -227,6 +227,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@angular/animations@npm:^22.0.0":
+  version: 22.0.5
+  resolution: "@angular/animations@npm:22.0.5"
+  dependencies:
+    tslib: "npm:^2.3.0"
+  peerDependencies:
+    "@angular/core": 22.0.5
+  checksum: 10c0/85262581aac077bba9dc00c4bb2b5cc8d8439056139a1777449d2ffbd89bdf5e0a0b7f5449bdf46644b50dc3383bde30e035207c892b74fae2d2a5fcd1a8024c
+  languageName: node
+  linkType: hard
+
 "@angular/build@npm:^22.0.5":
   version: 22.0.5
   resolution: "@angular/build@npm:22.0.5"
@@ -6250,15 +6261,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss-primeui@npm:^0.6.1":
-  version: 0.6.1
-  resolution: "tailwindcss-primeui@npm:0.6.1"
-  peerDependencies:
-    tailwindcss: ">=3.1.0"
-  checksum: 10c0/a7a576660d4b42dd31d8851c69a1c67199bf79b74bb0ac7e7ff3c8f721e8f05b41278d9af47550a78b234426e9df68cea802ddd5d28a97b00af28b2979226f74
-  languageName: node
-  linkType: hard
-
 "tailwindcss@npm:4.3.2, tailwindcss@npm:^4.3.2":
   version: 4.3.2
   resolution: "tailwindcss@npm:4.3.2"
@@ -6668,6 +6670,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "wallet-dashboard22@workspace:."
   dependencies:
+    "@angular/animations": "npm:^22.0.0"
     "@angular/build": "npm:^22.0.5"
     "@angular/cdk": "npm:^22.0.3"
     "@angular/cli": "npm:^22.0.5"
@@ -6688,7 +6691,6 @@ __metadata:
     primeng: "npm:22.0.0-rc.1"
     rxjs: "npm:~7.8.0"
     tailwindcss: "npm:^4.3.2"
-    tailwindcss-primeui: "npm:^0.6.1"
     tslib: "npm:^2.3.0"
     typescript: "npm:~6.0.2"
     vitest: "npm:^4.0.8"

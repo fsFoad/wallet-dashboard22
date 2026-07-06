@@ -6,6 +6,7 @@ import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeuix/themes/aura';
 
 import { routes } from './app.routes';
+import { environment } from '../environments/environment';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,17 +17,11 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
 
     providePrimeNG({
+      license: environment.primeUiLicense,
       ripple: true,
       theme: {
         preset: Aura,
-        options: {
-          darkModeSelector: '.app-dark',
-          cssLayer: {
-            name: 'primeng',
-            order: 'theme, base, primeng'
-          }
-        }
-      }
-    })
-  ]
+      },
+    }),
+  ],
 };
