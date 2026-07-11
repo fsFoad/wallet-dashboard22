@@ -1,0 +1,143 @@
+﻿/* â”€â”€ Balance hero card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.wd-balance-card {
+  position: relative;
+  overflow: hidden;
+  padding: var(--wd-section-pad);
+  border-radius: var(--wd-radius-card);
+  background: var(--wd-gradient);
+  color: #fff;
+  box-shadow: 0 16px 48px rgba(19, 140, 137, 0.32);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wd-balance-card__glow {
+  position: absolute;
+  top: -40%;
+  left: -10%;
+  width: 60%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.22) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.wd-balance-card__top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  z-index: 1;
+}
+
+.wd-label {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.85;
+}
+
+.wd-balance-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.wd-balance-amount {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.wd-balance-card__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.wd-currency-select {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.wd-currency-select select {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 8px 32px 8px 14px;
+  border-radius: var(--wd-radius-input);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+.wd-currency-select select option {
+  color: var(--wd-text);
+}
+
+.wd-currency-select svg {
+  position: absolute;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.wd-growth-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  backdrop-filter: blur(8px);
+}
+
+.wd-growth-badge svg {
+  width: 14px;
+  height: 14px;
+}
+
+.wd-mini-chart {
+  position: relative;
+  z-index: 1;
+  height: 64px;
+  margin: 8px 0 16px;
+}
+
+.wd-mini-chart svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.wd-mini-chart__line {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: wd-draw-line 1.4s ease forwards 0.2s;
+}
+
+.wd-mini-chart__area {
+  opacity: 0;
+  animation: wd-fade-in 0.8s ease forwards 0.4s;
+}
+
+.wd-balance-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+

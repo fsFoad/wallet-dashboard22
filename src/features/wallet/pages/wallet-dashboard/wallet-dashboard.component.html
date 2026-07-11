@@ -1,0 +1,341 @@
+<div class="wd-app">
+  <!-- Sidebar -->
+  <aside class="wd-sidebar">
+    <div class="wd-sidebar__brand">
+      <div class="wd-logo" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="10" fill="url(#wd-logo-grad)" />
+          <path d="M9 14h14v8a3 3 0 0 1-3 3H12a3 3 0 0 1-3-3v-8z" fill="white" fill-opacity=".95" />
+          <path d="M11 14V12a5 5 0 0 1 10 0v2" stroke="white" stroke-width="2" stroke-linecap="round" />
+          <defs>
+            <linearGradient id="wd-logo-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#138C89" />
+              <stop offset="1" stop-color="#0EAFB2" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div>
+        <p class="wd-sidebar__brand-name">{{ store.t().brandName }}</p>
+        <p class="wd-sidebar__brand-tag">{{ store.t().brandTag }}</p>
+      </div>
+    </div>
+
+    <app-menu />
+
+    <div class="wd-profile-card">
+      <div class="wd-profile-card__avatar">{{ profileInitials() }}</div>
+      <div class="wd-profile-card__info">
+        <p class="wd-profile-card__name">{{ store.t().profileName }}</p>
+        <p class="wd-profile-card__email">{{ store.t().profileEmail }}</p>
+      </div>
+      <button type="button" class="wd-icon-btn wd-icon-btn--ghost" [attr.aria-label]="store.t().profileMenu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="wd-main">
+    <header class="wd-header">
+      <div>
+        <p class="wd-header__greeting">{{ store.t().greeting }}</p>
+        <h1 class="wd-header__title">{{ store.t().welcome }}</h1>
+      </div>
+      <div class="wd-header__actions">
+        <div class="wd-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="search" [placeholder]="store.t().searchPlaceholder" [attr.aria-label]="store.t().searchPlaceholder" />
+        </div>
+        <button type="button" class="wd-icon-btn wd-lang-btn" (click)="store.toggleLang()" [attr.aria-label]="store.t().switchLanguage">
+          @if (store.lang() === 'en') {
+            <svg class="wd-flag" viewBox="0 0 24 16" aria-hidden="true">
+              <rect width="24" height="16" rx="2" fill="#fff"/>
+              <rect width="24" height="5.33" fill="#239F40"/>
+              <rect y="5.33" width="24" height="5.34" fill="#fff"/>
+              <rect y="10.67" width="24" height="5.33" fill="#DA0000"/>
+              <circle cx="12" cy="8" r="2.2" fill="#DA0000"/>
+            </svg>
+          } @else {
+            <svg class="wd-flag" viewBox="0 0 24 16" aria-hidden="true">
+              <rect width="24" height="16" rx="2" fill="#012169"/>
+              <path d="M0 0l24 16M24 0L0 16" stroke="#fff" stroke-width="2.5"/>
+              <path d="M0 0l24 16M24 0L0 16" stroke="#C8102E" stroke-width="1.2"/>
+              <path d="M12 0v16M0 8h24" stroke="#fff" stroke-width="4"/>
+              <path d="M12 0v16M0 8h24" stroke="#C8102E" stroke-width="2"/>
+            </svg>
+          }
+        </button>
+        <button type="button" class="wd-icon-btn" [attr.aria-label]="store.t().notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+          <span class="wd-badge-dot"></span>
+        </button>
+        <button type="button" class="wd-profile-chip" [attr.aria-label]="store.t().openProfile">
+          <span class="wd-profile-chip__avatar">{{ profileInitials() }}</span>
+          <span class="wd-profile-chip__name">{{ store.t().profileShort }}</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="wd-content wd-scroll">
+      <section class="wd-top-grid">
+        <article class="wd-balance-card wd-lift">
+          <div class="wd-balance-card__glow" aria-hidden="true"></div>
+          <div class="wd-balance-card__top">
+            <div>
+              <p class="wd-label">{{ store.t().walletBalance }}</p>
+              <div class="wd-balance-row">
+                @if (store.balanceVisible()) {
+                  <h2 class="wd-balance-amount">{{ store.balance() | currency: store.selectedCurrency():'symbol':'1.2-2' }}</h2>
+                } @else {
+                  <h2 class="wd-balance-amount">••••••••</h2>
+                }
+                <button type="button" class="wd-icon-btn wd-icon-btn--glass" (click)="store.toggleBalance()" [attr.aria-label]="store.balanceVisible() ? store.t().hideBalance : store.t().showBalance">
+                  @if (store.balanceVisible()) {
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                  } @else {
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/></svg>
+                  }
+                </button>
+              </div>
+            </div>
+            <div class="wd-balance-card__controls">
+              <label class="wd-currency-select">
+                <select [ngModel]="store.selectedCurrency()" (ngModelChange)="store.selectedCurrency.set($event)">
+                  @for (currency of store.currencies; track currency) {
+                    <option [value]="currency">{{ currency }}</option>
+                  }
+                </select>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </label>
+              <span class="wd-growth-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+                +{{ store.growthPercent() }}%
+              </span>
+            </div>
+          </div>
+
+          <div class="wd-mini-chart" aria-hidden="true">
+            <svg viewBox="0 0 280 64" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="wd-chart-fill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="white" stop-opacity=".35" />
+                  <stop offset="100%" stop-color="white" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <path class="wd-mini-chart__area" [attr.d]="balanceChartArea()" fill="url(#wd-chart-fill)" />
+              <path class="wd-mini-chart__line" [attr.d]="balanceChartPath()" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <div class="wd-balance-actions">
+            <button type="button" class="wd-btn wd-btn--glass">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="m22 2-7 20-4-9-9-4z"/></svg>
+              {{ store.t().transfer }}
+            </button>
+            <button type="button" class="wd-btn wd-btn--glass">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              {{ store.t().deposit }}
+            </button>
+            <button type="button" class="wd-btn wd-btn--glass">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+              {{ store.t().withdraw }}
+            </button>
+            <button type="button" class="wd-btn wd-btn--glass wd-btn--icon-only" [attr.aria-label]="store.t().moreActions">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="wd-card wd-lift">
+          <div class="wd-card__header">
+            <h3 class="wd-card__title">{{ store.t().monthlySummary }}</h3>
+            <button type="button" class="wd-link-btn">{{ store.t().viewReport }}</button>
+          </div>
+          <div class="wd-stat-grid">
+            @for (stat of store.monthlyStats(); track stat.label) {
+              <div class="wd-stat">
+                <p class="wd-stat__label">{{ stat.label }}</p>
+                <p class="wd-stat__value">{{ stat.value }}</p>
+                @if (stat.trend) {
+                  <span class="wd-stat__trend" [class.wd-stat__trend--up]="stat.trendUp" [class.wd-stat__trend--down]="!stat.trendUp">
+                    {{ stat.trend }}
+                  </span>
+                }
+              </div>
+            }
+          </div>
+        </article>
+
+        <article class="wd-card wd-lift">
+          <div class="wd-card__header">
+            <h3 class="wd-card__title">{{ store.t().quickActions }}</h3>
+          </div>
+          <div class="wd-quick-grid">
+            <button type="button" class="wd-quick-btn">
+              <span class="wd-quick-btn__icon wd-quick-btn__icon--primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="m22 2-7 20-4-9-9-4z"/></svg>
+              </span>
+              <span>{{ store.t().transfer }}</span>
+            </button>
+            <button type="button" class="wd-quick-btn">
+              <span class="wd-quick-btn__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
+              </span>
+              <span>{{ store.t().requestMoney }}</span>
+            </button>
+            <button type="button" class="wd-quick-btn">
+              <span class="wd-quick-btn__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+              </span>
+              <span>{{ store.t().exchange }}</span>
+            </button>
+            <button type="button" class="wd-quick-btn">
+              <span class="wd-quick-btn__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+              </span>
+              <span>{{ store.t().topUp }}</span>
+            </button>
+          </div>
+        </article>
+      </section>
+
+      <section class="wd-analytics-grid">
+        <article class="wd-card wd-lift wd-card--wide">
+          <div class="wd-card__header">
+            <h3 class="wd-card__title">{{ store.t().recentTransactions }}</h3>
+            <button type="button" class="wd-link-btn">{{ store.t().seeAll }}</button>
+          </div>
+          <div class="wd-table-wrap">
+            <table class="wd-table">
+              <thead>
+                <tr>
+                  <th>{{ store.t().merchant }}</th>
+                  <th>{{ store.t().category }}</th>
+                  <th>{{ store.t().date }}</th>
+                  <th>{{ store.t().amount }}</th>
+                  <th>{{ store.t().status }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (tx of store.transactions(); track tx.id) {
+                  <tr class="wd-table__row">
+                    <td>
+                      <div class="wd-merchant">
+                        <span class="wd-merchant__logo" [style.background]="tx.color + '18'" [style.color]="tx.color">{{ tx.initials }}</span>
+                        <span>{{ tx.merchant }}</span>
+                      </div>
+                    </td>
+                    <td><span class="wd-pill">{{ tx.category }}</span></td>
+                    <td class="wd-muted">{{ tx.date }}</td>
+                    <td [class.wd-amount--pos]="tx.amount > 0" [class.wd-amount--neg]="tx.amount < 0">{{ formatAmount(tx.amount) }}</td>
+                    <td>
+                      <span class="wd-status" [attr.data-status]="tx.status">{{ statusLabel(tx.status) }}</span>
+                    </td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="wd-card wd-lift">
+          <div class="wd-card__header">
+            <h3 class="wd-card__title">{{ store.t().spendingOverview }}</h3>
+          </div>
+          <div class="wd-donut-wrap">
+            <svg class="wd-donut" viewBox="0 0 140 140" aria-hidden="true">
+              <circle class="wd-donut__track" cx="70" cy="70" r="54" />
+              @for (arc of store.spendingArcs(); track arc.label) {
+                <circle
+                  class="wd-donut__segment"
+                  cx="70"
+                  cy="70"
+                  r="54"
+                  [attr.stroke]="arc.color"
+                  [attr.stroke-dasharray]="arc.dashArray"
+                  [attr.stroke-dashoffset]="arc.dashOffset"
+                />
+              }
+            </svg>
+            <div class="wd-donut__center">
+              <p class="wd-donut__total">100%</p>
+              <p class="wd-donut__sub">{{ store.t().thisMonth }}</p>
+            </div>
+          </div>
+          <ul class="wd-legend">
+            @for (seg of store.spendingSegments(); track seg.label) {
+              <li>
+                <span class="wd-legend__dot" [style.background]="seg.color"></span>
+                <span>{{ seg.label }}</span>
+                <strong>{{ seg.value }}%</strong>
+              </li>
+            }
+          </ul>
+        </article>
+
+        <article class="wd-card wd-lift">
+          <div class="wd-card__header">
+            <h3 class="wd-card__title">{{ store.t().categoryBreakdown }}</h3>
+          </div>
+          <div class="wd-donut-wrap">
+            <svg class="wd-donut" viewBox="0 0 140 140" aria-hidden="true">
+              <circle class="wd-donut__track" cx="70" cy="70" r="54" />
+              @for (arc of store.categoryArcs(); track arc.label) {
+                <circle
+                  class="wd-donut__segment"
+                  cx="70"
+                  cy="70"
+                  r="54"
+                  [attr.stroke]="arc.color"
+                  [attr.stroke-dasharray]="arc.dashArray"
+                  [attr.stroke-dashoffset]="arc.dashOffset"
+                />
+              }
+            </svg>
+            <div class="wd-donut__center">
+              <p class="wd-donut__total">{{ store.categoryTotal() }}%</p>
+              <p class="wd-donut__sub">{{ store.t().allocated }}</p>
+            </div>
+          </div>
+          <ul class="wd-legend">
+            @for (seg of store.categorySegments(); track seg.label) {
+              <li>
+                <span class="wd-legend__dot" [style.background]="seg.color"></span>
+                <span>{{ seg.label }}</span>
+                <strong>{{ seg.value }}%</strong>
+              </li>
+            }
+          </ul>
+        </article>
+      </section>
+
+      <section class="wd-banner wd-lift">
+        <div class="wd-banner__illus wd-banner__illus--wallet" aria-hidden="true">
+          <div class="wd-illus-wallet">
+            <div class="wd-illus-wallet__body"></div>
+            <div class="wd-illus-wallet__flap"></div>
+            <div class="wd-illus-coin wd-illus-coin--1"></div>
+            <div class="wd-illus-coin wd-illus-coin--2"></div>
+          </div>
+        </div>
+        <div class="wd-banner__content">
+          <p class="wd-banner__eyebrow">{{ store.t().bannerEyebrow }}</p>
+          <h3 class="wd-banner__title">{{ store.t().bannerTitle }}</h3>
+          <p class="wd-banner__text">{{ store.t().bannerText }}</p>
+          <button type="button" class="wd-btn wd-btn--primary">{{ store.t().inviteFriends }}</button>
+        </div>
+        <div class="wd-banner__illus wd-banner__illus--gift" aria-hidden="true">
+          <div class="wd-illus-gift">
+            <div class="wd-illus-gift__box"></div>
+            <div class="wd-illus-gift__lid"></div>
+            <div class="wd-illus-gift__ribbon-v"></div>
+            <div class="wd-illus-gift__ribbon-h"></div>
+            <div class="wd-illus-gift__bow"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>

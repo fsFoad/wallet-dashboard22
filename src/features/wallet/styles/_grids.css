@@ -1,0 +1,47 @@
+﻿/* â”€â”€ Grids â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.wd-top-grid {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr 0.85fr;
+  gap: var(--wd-card-gap);
+  margin-bottom: var(--wd-card-gap);
+}
+
+.wd-analytics-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: var(--wd-card-gap);
+  margin-bottom: var(--wd-card-gap);
+}
+
+/* â”€â”€ Cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.wd-card {
+  background: var(--wd-card);
+  border: 1px solid var(--wd-border);
+  border-radius: var(--wd-radius-card);
+  padding: var(--wd-section-pad);
+  box-shadow: var(--wd-shadow);
+}
+
+.wd-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.wd-card__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.wd-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.wd-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--wd-shadow-hover);
+}
+

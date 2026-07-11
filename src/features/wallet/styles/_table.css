@@ -1,0 +1,101 @@
+﻿/* â”€â”€ Table â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.wd-table-wrap {
+  overflow: auto;
+}
+
+.wd-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.wd-table th {
+  text-align: left;
+  padding: 0 12px 14px;
+  color: var(--wd-text-secondary);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--wd-border);
+}
+
+.wd-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #f0f4f8;
+  vertical-align: middle;
+}
+
+.wd-table__row {
+  transition: background 0.15s ease;
+}
+
+.wd-table__row:hover {
+  background: #f8fafc;
+}
+
+.wd-merchant {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.wd-merchant__logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.wd-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #f2f6f6;
+  color: var(--wd-text-secondary);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.wd-muted {
+  color: var(--wd-text-secondary);
+}
+
+.wd-amount--pos {
+  color: var(--wd-success);
+  font-weight: 700;
+}
+
+.wd-amount--neg {
+  color: var(--wd-danger);
+  font-weight: 700;
+}
+
+.wd-status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.wd-status[data-status='completed'] {
+  background: #ecfdf3;
+  color: #15803d;
+}
+
+.wd-status[data-status='pending'] {
+  background: #fffbeb;
+  color: #b45309;
+}
+
+.wd-status[data-status='failed'] {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+

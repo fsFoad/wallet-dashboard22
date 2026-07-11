@@ -1,0 +1,124 @@
+﻿/* â”€â”€ Sidebar brand â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.wd-sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 8px 24px;
+}
+
+.wd-logo svg {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.wd-sidebar__brand-name {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.wd-sidebar__brand-tag {
+  margin: 2px 0 0;
+  font-size: 0.75rem;
+  color: var(--wd-text-secondary);
+}
+
+/* â”€â”€ Nav â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.wd-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: auto;
+  padding: 0 4px;
+}
+
+.wd-nav__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: var(--wd-radius-btn);
+  background: transparent;
+  color: var(--wd-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+}
+
+.wd-nav__item:hover {
+  background: #f2f6fa;
+  color: var(--wd-text);
+}
+
+.wd-nav__item--active {
+  background: var(--wd-gradient);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(19, 140, 137, 0.28);
+}
+
+.wd-nav__item--active:hover {
+  color: #fff;
+}
+
+.wd-nav__icon svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* â”€â”€ Profile card (sidebar bottom) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.wd-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: var(--wd-radius-card);
+  background: #f8fafc;
+  border: 1px solid var(--wd-border);
+}
+
+.wd-profile-card__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--wd-gradient);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.wd-profile-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.wd-profile-card__name {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wd-profile-card__email {
+  margin: 2px 0 0;
+  font-size: 0.75rem;
+  color: var(--wd-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

@@ -1,0 +1,22 @@
+/* PrimeNG accessibility helpers (missing from Aura theme base) */
+.p-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.p-hidden-accessible input,
+.p-hidden-accessible select {
+  transform: scale(0);
+}
+
+[pFocusTrap] {
+  position: relative;
+}

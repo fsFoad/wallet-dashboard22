@@ -1,0 +1,55 @@
+﻿/* â”€â”€ Quick actions â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.wd-quick-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.wd-quick-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 12px;
+  border: 1px solid var(--wd-border);
+  border-radius: var(--wd-radius-card);
+  background: #fafbfc;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--wd-text);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.wd-quick-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--wd-shadow);
+  border-color: #d5e5e4;
+  background: #fff;
+}
+
+.wd-quick-btn__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: #eef6f6;
+  color: var(--wd-primary);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.wd-quick-btn__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.wd-quick-btn:hover .wd-quick-btn__icon {
+  transform: scale(1.06);
+}
+
+.wd-quick-btn__icon--primary {
+  background: var(--wd-gradient);
+  color: #fff;
+}
+

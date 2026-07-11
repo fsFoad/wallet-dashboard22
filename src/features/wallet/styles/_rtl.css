@@ -1,0 +1,49 @@
+﻿/* â”€â”€ Layout direction â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+app-wallet-dashboard.wd-ltr .wd-app {
+  direction: ltr;
+  flex-direction: row;
+}
+
+app-wallet-dashboard.wd-rtl .wd-app {
+  direction: rtl;
+  flex-direction: row;
+}
+
+/* â”€â”€ RTL (Persian / Arabic) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+app-wallet-dashboard.wd-rtl .wd-nav__item {
+  text-align: right;
+}
+
+app-wallet-dashboard.wd-rtl .wd-table th,
+app-wallet-dashboard.wd-rtl .wd-table td {
+  text-align: right;
+}
+
+app-wallet-dashboard.wd-rtl .wd-legend li strong {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+app-wallet-dashboard.wd-rtl .wd-currency-select svg {
+  right: auto;
+  left: 10px;
+}
+
+app-wallet-dashboard.wd-rtl .wd-currency-select select {
+  padding: 8px 14px 8px 32px;
+}
+
+app-wallet-dashboard.wd-rtl .wd-badge-dot {
+  right: auto;
+  left: 10px;
+}
+
+app-wallet-dashboard.wd-rtl .wd-balance-card__glow {
+  left: auto;
+  right: -10%;
+}
+
+app-wallet-dashboard.wd-rtl .wd-banner__text {
+  margin-left: auto;
+  margin-right: auto;
+}

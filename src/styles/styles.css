@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+@plugin 'tailwindcss-primeui';
+
+@import 'primeicons/primeicons.css';
+
+@import './base/reset.css';
+@import './base/globals.css';
+@import './base/typography.css';
+
+@import './themes/light.css';
+@import './themes/dark.css';
+
+@import './tokens/colors.css';
+
+@import './vendors/primeng-a11y.css';
+@import './vendors/primeng-rtl.css';
+
+@import './utilities/scrollbar.css';
+
+@import '../features/wallet/styles/index.css';
+@import '../features/dashboard/styles/index.css';
+@import '../layout/styles/menu.css';
+
+@custom-variant dark (&:where(.app-dark, .app-dark *));

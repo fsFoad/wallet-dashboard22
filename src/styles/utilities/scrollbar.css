@@ -1,0 +1,8 @@
+.u-scroll-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.u-scroll-hidden::-webkit-scrollbar {
+  display: none;
+}

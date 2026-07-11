@@ -1,0 +1,44 @@
+app-showcase {
+  display: block;
+  direction: rtl;
+}
+
+app-showcase .demo-card {
+  border: 1px solid var(--p-content-border-color, #e2e8f0);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background: var(--p-content-background, #fff);
+}
+
+app-showcase .demo-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+app-showcase .demo-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+app-showcase .sidebar-demo {
+  height: 220px;
+  border: 1px solid var(--p-content-border-color, #e2e8f0);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+app-showcase .gallery-demo {
+  max-width: 720px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+app-showcase .scrolltop-demo-host {
+  position: relative;
+  height: 12rem;
+  overflow: auto;
+  border: 1px solid var(--p-content-border-color, #e2e8f0);
+  border-radius: 0.5rem;
+}

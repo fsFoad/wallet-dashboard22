@@ -1,0 +1,113 @@
+﻿/* â”€â”€ 3D Illustrations â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.wd-illus-wallet {
+  position: relative;
+  width: 120px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.wd-illus-wallet__body {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 100px;
+  height: 72px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #0eafb2, #138c89);
+  box-shadow: 0 12px 32px rgba(19, 140, 137, 0.35);
+}
+
+.wd-illus-wallet__flap {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 84px;
+  height: 28px;
+  border-radius: 10px 10px 4px 4px;
+  background: linear-gradient(180deg, #5ec4c2, #138c89);
+  transform: perspective(200px) rotateX(12deg);
+}
+
+.wd-illus-coin {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #fde68a, #f59e0b);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+  animation: wd-float 3s ease-in-out infinite;
+}
+
+.wd-illus-coin--1 {
+  top: 0;
+  right: 0;
+}
+
+.wd-illus-coin--2 {
+  top: 24px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0.6s;
+}
+
+.wd-illus-gift {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.wd-illus-gift__box {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  width: 68px;
+  height: 56px;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #138c89, #0eafb2);
+  box-shadow: 0 12px 28px rgba(19, 140, 137, 0.3);
+}
+
+.wd-illus-gift__lid {
+  position: absolute;
+  bottom: 58px;
+  left: 12px;
+  width: 76px;
+  height: 16px;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #5ec4c2, #138c89);
+}
+
+.wd-illus-gift__ribbon-v,
+.wd-illus-gift__ribbon-h {
+  position: absolute;
+  background: #fde68a;
+  border-radius: 2px;
+}
+
+.wd-illus-gift__ribbon-v {
+  bottom: 8px;
+  left: 47px;
+  width: 6px;
+  height: 66px;
+}
+
+.wd-illus-gift__ribbon-h {
+  bottom: 36px;
+  left: 16px;
+  width: 68px;
+  height: 6px;
+}
+
+.wd-illus-gift__bow {
+  position: absolute;
+  bottom: 66px;
+  left: 38px;
+  width: 24px;
+  height: 14px;
+  border-radius: 50% 50% 0 0;
+  background: #fbbf24;
+  box-shadow: -14px 0 0 #fbbf24, 14px 0 0 #fbbf24;
+}
+

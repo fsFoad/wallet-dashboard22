@@ -1,0 +1,107 @@
+﻿/* â”€â”€ Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.wd-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px var(--wd-page-pad) 24px;
+}
+
+.wd-header__greeting {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--wd-text-secondary);
+}
+
+.wd-header__title {
+  margin: 4px 0 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.wd-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wd-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  height: 44px;
+  min-width: 280px;
+  background: var(--wd-card);
+  border: 1px solid var(--wd-border);
+  border-radius: var(--wd-radius-input);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wd-search:focus-within {
+  border-color: #b8d9d8;
+  box-shadow: 0 0 0 4px rgba(19, 140, 137, 0.1);
+}
+
+.wd-search svg {
+  width: 18px;
+  height: 18px;
+  color: var(--wd-text-secondary);
+  flex-shrink: 0;
+}
+
+.wd-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  color: var(--wd-text);
+}
+
+.wd-search input::placeholder {
+  color: #98a2b3;
+}
+
+.wd-profile-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 44px;
+  padding: 0 12px 0 6px;
+  border: 1px solid var(--wd-border);
+  border-radius: var(--wd-radius-input);
+  background: var(--wd-card);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.wd-profile-chip:hover {
+  box-shadow: var(--wd-shadow);
+  transform: translateY(-1px);
+}
+
+.wd-profile-chip__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--wd-gradient);
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+
+.wd-profile-chip__name {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.wd-profile-chip svg {
+  width: 16px;
+  height: 16px;
+  color: var(--wd-text-secondary);
+}
+

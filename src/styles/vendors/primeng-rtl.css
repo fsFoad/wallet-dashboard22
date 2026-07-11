@@ -1,0 +1,47 @@
+/* PrimeNG RTL layout fixes — physical left/right components stay LTR */
+
+.p-organizationchart {
+  direction: ltr;
+}
+
+.p-organizationchart-node-content {
+  direction: rtl;
+}
+
+.p-paginator {
+  direction: ltr;
+}
+
+.p-paginator-current {
+  direction: rtl;
+}
+
+.p-inputcolor {
+  direction: ltr;
+}
+
+.p-carousel {
+  direction: ltr;
+}
+
+.p-carousel-item,
+.p-carousel-item-clone {
+  direction: rtl;
+}
+
+.p-gallery {
+  direction: ltr;
+  min-height: 420px;
+}
+
+.p-gallery-item {
+  direction: rtl;
+}
+
+.p-compare {
+  direction: ltr;
+}
+
+.p-compare-item {
+  direction: rtl;
+}

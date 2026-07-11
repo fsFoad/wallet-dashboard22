@@ -1,0 +1,50 @@
+﻿app-wallet-dashboard {
+  --wd-primary: #138c89;
+  --wd-secondary: #0eafb2;
+  --wd-gradient: linear-gradient(135deg, #138c89, #0eafb2);
+  --wd-bg: #f7fafc;
+  --wd-card: #ffffff;
+  --wd-border: #e7edf3;
+  --wd-text: #18212f;
+  --wd-text-secondary: #667085;
+  --wd-success: #22c55e;
+  --wd-danger: #ef4444;
+  --wd-warning: #f59e0b;
+  --wd-shadow: 0 12px 40px rgba(16, 24, 40, 0.08);
+  --wd-shadow-hover: 0 20px 48px rgba(16, 24, 40, 0.12);
+  --wd-radius-card: 20px;
+  --wd-radius-btn: 16px;
+  --wd-radius-input: 14px;
+  --wd-sidebar-w: 260px;
+  --wd-page-pad: 32px;
+  --wd-section-pad: 24px;
+  --wd-card-gap: 24px;
+
+  display: block;
+  min-height: 100vh;
+  font-weight: 500;
+  color: var(--wd-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+app-wallet-dashboard.wd-ltr {
+  direction: ltr;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+app-wallet-dashboard.wd-rtl {
+  direction: rtl;
+  font-family: Vazirmatn, Inter, system-ui, sans-serif;
+}
+
+app-wallet-dashboard *,
+app-wallet-dashboard *::before,
+app-wallet-dashboard *::after {
+  box-sizing: border-box;
+}
+
+app-wallet-dashboard button,
+app-wallet-dashboard input,
+app-wallet-dashboard select {
+  font: inherit;
+}

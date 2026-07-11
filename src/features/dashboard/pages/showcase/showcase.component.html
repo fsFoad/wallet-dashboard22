@@ -1,0 +1,788 @@
+<p-toast />
+<p-confirmdialog />
+<p-confirmpopup />
+
+<div class="p-4 md:p-6 max-w-[1600px] mx-auto">
+  <header class="mb-6">
+    <h1 class="text-2xl font-bold m-0">تست PrimeNG</h1>
+    <p class="text-sm opacity-70 mt-2 mb-0">
+      نمایش {{ totalComponents }} کامپوننت PrimeNG 22 در یک صفحه
+    </p>
+  </header>
+
+  <p-tabs value="form">
+    <p-tablist>
+      <p-tab value="form">Form (28)</p-tab>
+      <p-tab value="button">Button (3)</p-tab>
+      <p-tab value="data">Data (10)</p-tab>
+      <p-tab value="panel">Panel (10)</p-tab>
+      <p-tab value="overlay">Overlay (7)</p-tab>
+      <p-tab value="menu">Menu (9)</p-tab>
+      <p-tab value="messages">Messages (2)</p-tab>
+      <p-tab value="media">Media (3)</p-tab>
+      <p-tab value="file">File (1)</p-tab>
+      <p-tab value="misc">Misc (20)</p-tab>
+    </p-tablist>
+
+    <p-tabpanels>
+      <!-- FORM -->
+      <p-tabpanel value="form">
+        <div class="demo-grid">
+          <section class="demo-card">
+            <h3>AutoComplete</h3>
+            <p-autocomplete [(ngModel)]="autocompleteText" [suggestions]="filteredCountries" (completeMethod)="searchCountries($event)" placeholder="جستجو" />
+          </section>
+
+          <section class="demo-card">
+            <h3>CascadeSelect</h3>
+            <p-cascadeselect [(ngModel)]="cascade" [options]="$any(cascadeData)" optionLabel="label" optionGroupLabel="label" [optionGroupChildren]="['items']" placeholder="انتخاب" styleClass="w-full" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Checkbox</h3>
+            <p-checkbox [(ngModel)]="checked" [binary]="true" inputId="chk1" />
+            <label for="chk1" class="ms-2">فعال</label>
+          </section>
+
+          <section class="demo-card">
+            <h3>DatePicker</h3>
+            <p-datepicker [(ngModel)]="date" [showIcon]="true" styleClass="w-full" />
+          </section>
+
+          <section class="demo-card">
+            <h3>FloatLabel</h3>
+            <p-floatlabel>
+              <input pInputText id="float" [(ngModel)]="text" class="w-full" />
+              <label for="float">نام</label>
+            </p-floatlabel>
+          </section>
+
+          <section class="demo-card">
+            <h3>IconField</h3>
+            <p-iconfield>
+              <p-inputicon class="pi pi-search" />
+              <input pInputText [(ngModel)]="text" placeholder="جستجو" class="w-full" />
+            </p-iconfield>
+          </section>
+
+          <section class="demo-card">
+            <h3>IftaLabel</h3>
+            <p-iftalabel>
+              <input pInputText id="ifta" [(ngModel)]="text" class="w-full" />
+              <label for="ifta">برچسب</label>
+            </p-iftalabel>
+          </section>
+
+          <section class="demo-card">
+            <h3>InputColor</h3>
+            <p-inputcolor [(ngModel)]="color" class="block w-full">
+              <div class="flex flex-col gap-3">
+                <p-inputcolor-area>
+                  <p-inputcolor-area-background />
+                  <p-inputcolor-area-handle />
+                </p-inputcolor-area>
+                <p-inputcolor-slider channel="hue">
+                  <p-inputcolor-slider-track />
+                  <p-inputcolor-slider-handle />
+                </p-inputcolor-slider>
+                <div class="flex items-center gap-2">
+                  <p-inputcolor-swatch>
+                    <p-inputcolor-swatch-background />
+                  </p-inputcolor-swatch>
+                  <div class="flex flex-col gap-1 flex-1 min-w-0">
+                    <label class="text-xs opacity-70">HEX</label>
+                    <input pInputText pInputColorInput channel="hex" class="w-full" />
+                  </div>
+                </div>
+              </div>
+            </p-inputcolor>
+          </section>
+
+          <section class="demo-card">
+            <h3>InputGroup</h3>
+            <p-inputgroup>
+              <p-inputgroup-addon>https://</p-inputgroup-addon>
+              <input pInputText [(ngModel)]="text" placeholder="domain" />
+            </p-inputgroup>
+          </section>
+
+          <section class="demo-card">
+            <h3>InputMask</h3>
+            <p-inputmask mask="99/99/9999" [(ngModel)]="mask" placeholder="تاریخ" styleClass="w-full" />
+          </section>
+
+          <section class="demo-card">
+            <h3>InputNumber</h3>
+            <p-inputnumber [(ngModel)]="number" styleClass="w-full" />
+          </section>
+
+          <section class="demo-card">
+            <h3>InputOtp</h3>
+            <p-inputotp [(ngModel)]="otp" [length]="4" />
+          </section>
+
+          <section class="demo-card">
+            <h3>InputPassword</h3>
+            <input type="password" pInputText pInputPassword [(ngModel)]="password" placeholder="رمز عبور" class="w-full" />
+          </section>
+
+          <section class="demo-card">
+            <h3>InputTags</h3>
+            <p-inputtags [(ngModel)]="tags" placeholder="تگ" styleClass="w-full" />
+          </section>
+
+          <section class="demo-card">
+            <h3>InputText</h3>
+            <input pInputText [(ngModel)]="text" placeholder="متن" class="w-full" />
+          </section>
+
+          <section class="demo-card">
+            <h3>KeyFilter</h3>
+            <input pInputText pKeyFilter="int" placeholder="فقط عدد" class="w-full" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Knob</h3>
+            <p-knob [(ngModel)]="knob" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Label</h3>
+            <label pLabel for="lbl">نام کاربری</label>
+            <input pInputText id="lbl" [(ngModel)]="text" class="w-full mt-2" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Listbox</h3>
+            <p-listbox [options]="cities" [(ngModel)]="listbox" optionLabel="label" optionValue="value" [multiple]="true" [checkbox]="true" styleClass="w-full" />
+          </section>
+
+          <section class="demo-card">
+            <h3>RadioButton</h3>
+            <div class="flex gap-3">
+              <p-radiobutton name="r" value="a" [(ngModel)]="radio" inputId="ra" />
+              <label for="ra">الف</label>
+              <p-radiobutton name="r" value="b" [(ngModel)]="radio" inputId="rb" />
+              <label for="rb">ب</label>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Rating</h3>
+            <p-rating [(ngModel)]="rating" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Select</h3>
+            <p-select [options]="cities" [(ngModel)]="selectedCity" optionLabel="label" optionValue="value" placeholder="شهر" styleClass="w-full" />
+          </section>
+
+          <section class="demo-card">
+            <h3>SelectButton</h3>
+            <p-selectbutton [options]="selectBtnOptions" [(ngModel)]="selectBtn" optionLabel="label" optionValue="value" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Slider</h3>
+            <p-slider [(ngModel)]="slider" styleClass="w-full" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Textarea</h3>
+            <textarea pTextarea [(ngModel)]="textarea" rows="3" class="w-full"></textarea>
+          </section>
+
+          <section class="demo-card">
+            <h3>ToggleButton</h3>
+            <p-togglebutton [(ngModel)]="toggleBtn" onLabel="روشن" offLabel="خاموش" />
+          </section>
+
+          <section class="demo-card">
+            <h3>ToggleSwitch</h3>
+            <p-toggleswitch [(ngModel)]="switchOn" />
+          </section>
+
+          <section class="demo-card">
+            <h3>TreeSelect</h3>
+            <p-treeselect [(ngModel)]="treeSelect" [options]="treeNodes" selectionMode="single" placeholder="انتخاب حساب" styleClass="w-full" />
+          </section>
+        </div>
+      </p-tabpanel>
+
+      <!-- BUTTON -->
+      <p-tabpanel value="button">
+        <div class="demo-grid">
+          <section class="demo-card">
+            <h3>Button</h3>
+            <p-button label="کلیک" icon="pi pi-check" />
+            <button pButton pRipple label="Directive" class="ms-2"></button>
+          </section>
+
+          <section class="demo-card">
+            <h3>SpeedDial</h3>
+            <p-speeddial [model]="speedDialItems" direction="up" />
+          </section>
+
+          <section class="demo-card">
+            <h3>SplitButton</h3>
+            <p-splitbutton label="ذخیره" [model]="menuItems" />
+          </section>
+        </div>
+      </p-tabpanel>
+
+      <!-- DATA -->
+      <p-tabpanel value="data">
+        <div class="flex flex-col gap-4">
+          <section class="demo-card">
+            <h3>DataView</h3>
+            <p-dataview [value]="dataViewItems">
+              <ng-template #list let-items>
+                @for (item of items; track item.id) {
+                  <div class="p-2 border-b flex justify-between">
+                    <span>{{ item.name }}</span>
+                    <span class="opacity-70">{{ item.status }} — {{ item.amount | number }} تومان</span>
+                  </div>
+                }
+              </ng-template>
+            </p-dataview>
+          </section>
+
+          <div class="demo-grid">
+            <section class="demo-card">
+              <h3>OrderList</h3>
+              <p-orderlist [value]="orderList" dataKey="name" header="لیست" [dragdrop]="true">
+                <ng-template #item let-item>{{ item.name }}</ng-template>
+              </p-orderlist>
+            </section>
+
+            <section class="demo-card">
+              <h3>PickList</h3>
+              <p-picklist [source]="pickSource" [target]="pickTarget" sourceHeader="منبع" targetHeader="مقصد">
+                <ng-template #item let-item>{{ item.name }}</ng-template>
+              </p-picklist>
+            </section>
+          </div>
+
+          <section class="demo-card">
+            <h3>OrgChart</h3>
+            <p-organizationchart [value]="orgData" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Paginator</h3>
+            <p-paginator [rows]="5" [totalRecords]="paginatorTotal" [first]="paginatorFirst" (onPageChange)="onPaginatorChange($event)" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Table</h3>
+            <p-table [value]="products" [paginator]="true" [rows]="5" [tableStyle]="{ 'min-width': '100%' }">
+              <ng-template #header>
+                <tr>
+                  <th>نام</th>
+                  <th>دسته</th>
+                  <th>قیمت</th>
+                  <th>موجودی</th>
+                  <th>وضعیت</th>
+                </tr>
+              </ng-template>
+              <ng-template #body let-product>
+                <tr>
+                  <td>{{ product.name }}</td>
+                  <td>{{ product.category }}</td>
+                  <td>{{ product.price | number }} تومان</td>
+                  <td>{{ product.stock }}</td>
+                  <td>
+                    <p-tag [value]="product.status === 'active' ? 'فعال' : 'غیرفعال'" [severity]="product.status === 'active' ? 'success' : 'secondary'" />
+                  </td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </section>
+
+          <section class="demo-card">
+            <h3>Timeline</h3>
+            <p-timeline [value]="timelineEvents" align="alternate">
+              <ng-template #marker let-event>
+                <span class="flex items-center justify-center rounded-full text-white w-8 h-8" [style.background]="event.color">
+                  <i [class]="event.icon"></i>
+                </span>
+              </ng-template>
+              <ng-template #content let-event>
+                <div class="font-semibold">{{ event.status }}</div>
+                <div class="text-sm opacity-70">{{ event.date }}</div>
+              </ng-template>
+            </p-timeline>
+          </section>
+
+          <div class="demo-grid">
+            <section class="demo-card">
+              <h3>Tree</h3>
+              <p-tree [value]="treeNodes" />
+            </section>
+
+            <section class="demo-card">
+              <h3>TreeTable</h3>
+              <p-treetable [value]="treeTableNodes" [tableStyle]="{ 'min-width': '100%' }">
+                <ng-template #header>
+                  <tr>
+                    <th>نام</th>
+                    <th>حجم</th>
+                  </tr>
+                </ng-template>
+                <ng-template #body let-rowNode let-rowData="rowData">
+                  <tr [ttRow]="rowNode">
+                    <td><p-treetable-toggler [rowNode]="rowNode" />{{ rowData.name }}</td>
+                    <td>{{ rowData.size }}</td>
+                  </tr>
+                </ng-template>
+              </p-treetable>
+            </section>
+          </div>
+
+          <section class="demo-card">
+            <h3>VirtualScroller</h3>
+            <p-scroller [items]="scrollerItems" [itemSize]="40" scrollHeight="160px">
+              <ng-template #item let-item>{{ item }}</ng-template>
+            </p-scroller>
+          </section>
+        </div>
+      </p-tabpanel>
+
+      <!-- PANEL -->
+      <p-tabpanel value="panel">
+        <div class="flex flex-col gap-4">
+          <section class="demo-card">
+            <h3>Accordion</h3>
+            <p-accordion value="0">
+              <p-accordion-panel value="0">
+                <p-accordion-header>بخش ۱</p-accordion-header>
+                <p-accordion-content>محتوای بخش اول</p-accordion-content>
+              </p-accordion-panel>
+              <p-accordion-panel value="1">
+                <p-accordion-header>بخش ۲</p-accordion-header>
+                <p-accordion-content>محتوای بخش دوم</p-accordion-content>
+              </p-accordion-panel>
+            </p-accordion>
+          </section>
+
+          <div class="demo-grid">
+            <section class="demo-card">
+              <h3>Card</h3>
+              <p-card header="کارت" subheader="زیرعنوان">محتوای کارت PrimeNG</p-card>
+            </section>
+
+            <section class="demo-card">
+              <h3>Panel</h3>
+              <p-panel header="پنل" [toggleable]="true">محتوای پنل</p-panel>
+            </section>
+
+            <section class="demo-card">
+              <h3>Fieldset</h3>
+              <p-fieldset legend="فیلدست" [toggleable]="true">محتوای فیلدست</p-fieldset>
+            </section>
+          </div>
+
+          <section class="demo-card">
+            <h3>Divider</h3>
+            <p>بالا</p>
+            <p-divider />
+            <p>پایین</p>
+          </section>
+
+          <section class="demo-card">
+            <h3>ScrollArea</h3>
+            <p-scrollarea style="height: 120px">
+              <p-scrollarea-viewport>
+                <p-scrollarea-content>
+                  @for (i of [1,2,3,4,5,6,7,8]; track i) {
+                    <p class="m-0 py-2">خط اسکرول {{ i }}</p>
+                  }
+                </p-scrollarea-content>
+              </p-scrollarea-viewport>
+            </p-scrollarea>
+          </section>
+
+          <section class="demo-card">
+            <h3>Splitter</h3>
+            <p-splitter [style]="{ height: '160px' }">
+              <p-splitterpanel [size]="50">پنل چپ</p-splitterpanel>
+              <p-splitterpanel [size]="50">پنل راست</p-splitterpanel>
+            </p-splitter>
+          </section>
+
+          <section class="demo-card">
+            <h3>Stepper</h3>
+            <p-stepper [value]="step()">
+              <p-step-list>
+                <p-step [value]="1">مرحله ۱</p-step>
+                <p-step [value]="2">مرحله ۲</p-step>
+              </p-step-list>
+              <p-step-panels>
+                <p-step-panel [value]="1">محتوای مرحله ۱</p-step-panel>
+                <p-step-panel [value]="2">محتوای مرحله ۲</p-step-panel>
+              </p-step-panels>
+            </p-stepper>
+            <div class="flex gap-2 mt-3">
+              <p-button label="قبلی" [disabled]="step() <= 1" (onClick)="step.set(step() - 1)" />
+              <p-button label="بعدی" [disabled]="step() >= 2" (onClick)="step.set(step() + 1)" />
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Toolbar</h3>
+            <p-toolbar>
+              <ng-template #start><p-button label="جدید" icon="pi pi-plus" /></ng-template>
+              <ng-template #end><p-button label="خروجی" icon="pi pi-download" severity="secondary" /></ng-template>
+            </p-toolbar>
+          </section>
+        </div>
+      </p-tabpanel>
+
+      <!-- OVERLAY -->
+      <p-tabpanel value="overlay">
+        <div class="demo-grid">
+          <section class="demo-card">
+            <h3>ConfirmDialog</h3>
+            <p-button label="نمایش" (onClick)="confirmDialog()" />
+          </section>
+
+          <section class="demo-card">
+            <h3>ConfirmPopup</h3>
+            <p-button label="پاپ‌آپ" (onClick)="confirmPopup($event)" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Dialog</h3>
+            <p-button label="باز کردن" (onClick)="dialogVisible = true" />
+            <p-dialog header="دیالوگ" [(visible)]="dialogVisible" [modal]="true" [style]="{ width: '360px' }">
+              محتوای دیالوگ
+            </p-dialog>
+          </section>
+
+          <section class="demo-card">
+            <h3>Drawer</h3>
+            <p-button label="کشو" (onClick)="drawerVisible = true" />
+            <p-drawer header="کشو" [(visible)]="drawerVisible" position="right">
+              محتوای کشو
+            </p-drawer>
+          </section>
+
+          <section class="demo-card">
+            <h3>DynamicDialog</h3>
+            <p-button label="داینامیک" (onClick)="openDynamicDialog()" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Popover</h3>
+            <p-button #popBtn label="Popover" (onClick)="pop.toggle($event)" />
+            <p-popover #pop>محتوای Popover</p-popover>
+          </section>
+
+          <section class="demo-card">
+            <h3>Tooltip</h3>
+            <p-button label="هاور" pTooltip="راهنمای Tooltip" tooltipPosition="top" />
+          </section>
+        </div>
+      </p-tabpanel>
+
+      <!-- MENU -->
+      <p-tabpanel value="menu">
+        <div class="flex flex-col gap-4">
+          <section class="demo-card">
+            <h3>Breadcrumb</h3>
+            <p-breadcrumb [model]="breadcrumbItems" [home]="{ icon: 'pi pi-home', routerLink: '/' }" />
+          </section>
+
+          <section class="demo-card">
+            <h3>CommandMenu</h3>
+            <p-commandmenu [model]="commandMenuItems" />
+          </section>
+
+          <section class="demo-card">
+            <h3>ContextMenu</h3>
+            <p-contextmenu #cm [model]="contextMenuItems" />
+            <div class="p-4 border rounded mt-2" (contextmenu)="cm.show($event)">راست‌کلیک کنید</div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Dock</h3>
+            <p-dock [model]="dockItems" position="bottom" />
+          </section>
+
+          <section class="demo-card">
+            <h3>MegaMenu</h3>
+            <p-megamenu [model]="megaItems" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Menu</h3>
+            <p-menu [model]="menuItems" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Menubar</h3>
+            <p-menubar [model]="menubarItems" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Sidebar</h3>
+            <div class="sidebar-demo">
+              <p-sidebar-layout>
+                <p-sidebar>
+                  <p-sidebar-header>منو</p-sidebar-header>
+                  <p-sidebar-content>
+                    <p-sidebar-menu>
+                      <p-sidebar-menu-item>
+                        <button type="button" pSidebarMenuButton>داشبورد</button>
+                      </p-sidebar-menu-item>
+                      <p-sidebar-menu-item>
+                        <button type="button" pSidebarMenuButton>تنظیمات</button>
+                      </p-sidebar-menu-item>
+                    </p-sidebar-menu>
+                  </p-sidebar-content>
+                </p-sidebar>
+                <p-sidebar-main>
+                  <div class="p-4">محتوای اصلی Sidebar</div>
+                </p-sidebar-main>
+              </p-sidebar-layout>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>TieredMenu</h3>
+            <p-tieredmenu [model]="tieredItems" />
+          </section>
+        </div>
+      </p-tabpanel>
+
+      <!-- MESSAGES -->
+      <p-tabpanel value="messages">
+        <div class="demo-grid">
+          <section class="demo-card">
+            <h3>Message</h3>
+            <p-message severity="info">پیام اطلاعاتی</p-message>
+          </section>
+
+          <section class="demo-card">
+            <h3>Toast</h3>
+            <p-button label="نمایش Toast" (onClick)="showToast()" />
+          </section>
+        </div>
+      </p-tabpanel>
+
+      <!-- MEDIA -->
+      <p-tabpanel value="media">
+        <div class="flex flex-col gap-4">
+          <section class="demo-card">
+            <h3>Carousel</h3>
+            <p-carousel [value]="carouselItems" [numVisible]="1" [numScroll]="1">
+              <ng-template #item let-item>
+                <div class="p-6 text-center text-white rounded-lg" [style.background]="item.color">
+                  <div class="text-xl font-bold">{{ item.title }}</div>
+                  <div class="text-sm mt-1 opacity-90">{{ item.subtitle }}</div>
+                </div>
+              </ng-template>
+            </p-carousel>
+          </section>
+
+          <section class="demo-card">
+            <h3>Gallery</h3>
+            <p-gallery class="gallery-demo">
+              <p-gallery-content>
+                @for (img of galleryImages; track $index) {
+                  <p-gallery-item>
+                    <img [src]="img.itemImageSrc" [alt]="img.alt" class="max-h-full max-w-full rounded object-contain" />
+                  </p-gallery-item>
+                }
+                <button type="button" pGalleryPrev aria-label="قبلی">
+                  <i class="pi pi-chevron-left"></i>
+                </button>
+                <button type="button" pGalleryNext aria-label="بعدی">
+                  <i class="pi pi-chevron-right"></i>
+                </button>
+              </p-gallery-content>
+              <p-gallery-footer>
+                <p-gallery-thumbnail [slidesPerPage]="3">
+                  <p-gallery-thumbnail-content>
+                    @for (img of galleryImages; track $index; let i = $index) {
+                      <p-gallery-thumbnail-item [index]="i">
+                        <img [src]="img.itemImageSrc" [alt]="img.alt" class="h-full w-full object-cover" />
+                      </p-gallery-thumbnail-item>
+                    }
+                  </p-gallery-thumbnail-content>
+                </p-gallery-thumbnail>
+              </p-gallery-footer>
+            </p-gallery>
+          </section>
+
+          <section class="demo-card">
+            <h3>Compare</h3>
+            <p-compare style="height: 200px">
+              <p-compare-item>
+                <div class="flex items-center justify-center h-full bg-indigo-500 text-white">قبل</div>
+              </p-compare-item>
+              <p-compare-item>
+                <div class="flex items-center justify-center h-full bg-emerald-500 text-white">بعد</div>
+              </p-compare-item>
+            </p-compare>
+          </section>
+        </div>
+      </p-tabpanel>
+
+      <!-- FILE -->
+      <p-tabpanel value="file">
+        <section class="demo-card">
+          <h3>FileUpload</h3>
+          <p-fileupload
+            mode="basic"
+            chooseLabel="انتخاب فایل"
+            [customUpload]="true"
+            (uploadHandler)="onFileUpload($event)"
+            [auto]="true"
+            accept="image/*"
+            [maxFileSize]="1000000"
+          />
+        </section>
+      </p-tabpanel>
+
+      <!-- MISC -->
+      <p-tabpanel value="misc">
+        <div class="demo-grid">
+          <section class="demo-card" pAnimateOnScroll enterClass="animate-enter fade-in-10 slide-in-from-b-8 animate-duration-1000">
+            <h3>AnimateOnScroll</h3>
+            <p class="m-0 text-sm opacity-70">این کارت با اسکرول انیمیت می‌شود</p>
+          </section>
+
+          <section class="demo-card">
+            <h3>AutoFocus</h3>
+            <input pInputText pAutoFocus placeholder="فوکوس خودکار" class="w-full" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Avatar</h3>
+            <p-avatar label="PR" shape="circle" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Badge</h3>
+            <p-badge value="3" severity="danger" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Bind</h3>
+            <span [pBind]="{ class: 'text-primary font-semibold' }">مستقیم Bind</span>
+          </section>
+
+          <section class="demo-card">
+            <h3>BlockUI</h3>
+            <p-blockui [blocked]="blocked" />
+            <p-button label="بلاک UI" (onClick)="toggleBlock()" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Chip</h3>
+            <p-chip label="Angular" icon="pi pi-check" />
+          </section>
+
+          <section class="demo-card">
+            <h3>ClassNames</h3>
+            <p-button label="تغییر کلاس" (onClick)="classNamesActive = !classNamesActive" />
+            <div [pClass]="{ 'text-red-500 font-bold': classNamesActive, 'text-gray-500': !classNamesActive }" class="mt-2">
+              نمونه ClassNames
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Fluid</h3>
+            <p-fluid>
+              <input pInputText placeholder="عرض کامل" />
+            </p-fluid>
+          </section>
+
+          <section class="demo-card">
+            <h3>FocusTrap</h3>
+            <p class="text-sm opacity-70 m-0 mb-2">Tab فقط بین عناصر داخل این ناحیه می‌چرخد.</p>
+            <div pFocusTrap class="p-3 border rounded flex flex-col gap-2 max-w-sm">
+              <input pInputText placeholder="فیلد اول" class="w-full" />
+              <input pInputText placeholder="فیلد دوم" class="w-full" />
+              <p-button label="دکمه" severity="secondary" />
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Inplace</h3>
+            <p class="text-sm opacity-70 m-0 mb-2">برای ویرایش روی مقدار کلیک کنید.</p>
+            <p-inplace>
+              <ng-template #display>
+                <span class="font-semibold">{{ inplace }}</span>
+              </ng-template>
+              <ng-template #content let-closeCallback="closeCallback">
+                <div class="flex gap-2 items-center flex-wrap">
+                  <input pInputText [(ngModel)]="inplace" class="min-w-[12rem]" />
+                  <p-button icon="pi pi-check" (onClick)="closeCallback($event)" />
+                  <p-button icon="pi pi-times" severity="secondary" (onClick)="closeCallback($event)" />
+                </div>
+              </ng-template>
+            </p-inplace>
+          </section>
+
+          <section class="demo-card">
+            <h3>MeterGroup</h3>
+            <p-metergroup [value]="meters" />
+          </section>
+
+          <section class="demo-card">
+            <h3>ProgressBar</h3>
+            <p-progressbar [value]="progressValue" />
+          </section>
+
+          <section class="demo-card">
+            <h3>ProgressSpinner</h3>
+            <p-progressspinner styleClass="w-12 h-12" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Ripple</h3>
+            <button pRipple class="p-3 border rounded">کلیک با Ripple</button>
+          </section>
+
+          <section class="demo-card">
+            <h3>ScrollTop</h3>
+            <p class="text-sm opacity-70 m-0 mb-2">اسکرول کنید تا دکمه بازگشت به بالا ظاهر شود.</p>
+            <div class="scrolltop-demo-host">
+              <div class="p-3 space-y-2">
+                @for (line of scrollTopLines; track line) {
+                  <p class="m-0 text-sm">{{ line }}</p>
+                }
+              </div>
+              <p-scrolltop target="parent" [threshold]="80" buttonAriaLabel="بازگشت به بالا" />
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Skeleton</h3>
+            <p-skeleton width="100%" height="2rem" />
+          </section>
+
+          <section class="demo-card">
+            <h3>StyleClass</h3>
+            <p-button label="Toggle" pStyleClass=".style-target" enterFromClass="hidden" enterActiveClass="animate-fadein" leaveToClass="hidden" />
+            <div class="style-target hidden mt-2 p-2 border rounded">محتوای StyleClass</div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Tag</h3>
+            <p-tag value="جدید" severity="success" />
+          </section>
+
+          <section class="demo-card">
+            <h3>Terminal</h3>
+            <p-terminal welcomeMessage="PrimeNG Terminal" prompt="> " styleClass="w-full" />
+          </section>
+        </div>
+      </p-tabpanel>
+    </p-tabpanels>
+  </p-tabs>
+</div>
+
+<p-scrolltop />

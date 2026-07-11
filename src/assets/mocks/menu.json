@@ -1,0 +1,541 @@
+{
+  "message": {
+    "result": {
+      "reason": "",
+      "fullErrorDesc": "",
+      "errorDesc": "عملیات با موفقیت انجام شد.",
+      "errorCode": 0,
+      "type": 1,
+      "layer": 0,
+      "errorParams": null
+    },
+    "data": {
+      "outParam": null,
+      "resultSet": {
+        "output": [
+          {
+            "children": [
+              {
+                "children": [],
+                "icon": "home",
+                "menuId": 2,
+                "id": "home",
+                "title": "صفحه اصلی",
+                "type": "item",
+                "parentId": 1,
+                "translate": "home",
+                "url": "/home"
+              },
+              {
+                "children": [
+                  {
+                    "children": [],
+                    "icon": "person",
+                    "menuId": 4,
+                    "id": "issuepersonalwallet2",
+                    "title": "صدور کیف شخصی",
+                    "type": "item",
+                    "parentId": 3,
+                    "translate": "issue.personal.wallet",
+                    "url": "/wallet/issuepersonalwallet"
+                  },
+                  {
+                    "children": [],
+                    "icon": "person",
+                    "menuId": 5,
+                    "id": "issuebankpersonalwallet",
+                    "title": "صدور کیف شخصی برای مشتریان بانک",
+                    "type": "item",
+                    "parentId": 3,
+                    "translate": "issue.personal.wallet.for.bank",
+                    "url": "/wallet/issuebankpersonalwallet"
+                  }
+                ],
+                "icon": "person",
+                "menuId": 3,
+                "id": "issueWalletGroup",
+                "title": "مدیریت کیف شخصی",
+                "type": "collapsable",
+                "parentId": 1,
+                "translate": "مدیریت کیف شخصی",
+                "url": null
+              },
+              {
+                "children": [
+                  {
+                    "children": [],
+                    "icon": "work",
+                    "menuId": 7,
+                    "id": "real",
+                    "title": "صدور کیف تجاری",
+                    "type": "item",
+                    "parentId": 6,
+                    "translate": "issue.commercial.wallet",
+                    "url": "/wallet/issue"
+                  },
+                  {
+                    "children": [],
+                    "icon": "work",
+                    "menuId": 8,
+                    "id": "managecommercialwallet",
+                    "title": "مدیریت پذیرنده ها",
+                    "type": "item",
+                    "parentId": 6,
+                    "translate": "merchant.management",
+                    "url": "/wallet/merchantmanagement"
+                  },
+                  {
+                    "children": [],
+                    "icon": "work",
+                    "menuId": 9,
+                    "id": "branchmanagement",
+                    "title": "مدیریت نمایندگی ها",
+                    "type": "item",
+                    "parentId": 6,
+                    "translate": "branch.management",
+                    "url": "/wallet/branchmanagement"
+                  },
+                  {
+                    "children": [],
+                    "icon": "work",
+                    "menuId": 10,
+                    "id": "terminalmanagement",
+                    "title": "مدیریت ترمینال ها",
+                    "type": "item",
+                    "parentId": 6,
+                    "translate": "terminal.management",
+                    "url": "/wallet/terminalmanagement"
+                  }
+                ],
+                "icon": "work",
+                "menuId": 6,
+                "id": "managecommercialwallet",
+                "title": "مدیریت کیف تجاری",
+                "type": "collapsable",
+                "parentId": 1,
+                "translate": "issue.commercial.wallet.mngmnt",
+                "url": null
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [],
+                        "icon": "monetization_on",
+                        "menuId": 13,
+                        "id": "chargewallet",
+                        "title": "شارژکیف پول",
+                        "type": "item",
+                        "parentId": 12,
+                        "translate": "charging.wallet",
+                        "url": "/financial/chargewallet"
+                      },
+                      {
+                        "children": [],
+                        "icon": "monetization_on",
+                        "menuId": 14,
+                        "id": "chargewalletbysegment",
+                        "title": "شارژ جیب کیف پول",
+                        "type": "item",
+                        "parentId": 12,
+                        "translate": "charging.organizational.wallet",
+                        "url": "/financial/chargewalletbysegment"
+                      },
+                      {
+                        "children": [],
+                        "icon": "monetization_on",
+                        "menuId": 15,
+                        "id": "groupchargewallet",
+                        "title": "شارژ گروهی",
+                        "type": "item",
+                        "parentId": 12,
+                        "translate": "charging.group",
+                        "url": "/financial/groupchargewallet"
+                      },
+                      {
+                        "children": [],
+                        "icon": "monetization_on",
+                        "menuId": 44,
+                        "id": "dechargewallet",
+                        "title": "دشارژکیف پول",
+                        "type": "item",
+                        "parentId": 12,
+                        "translate": "دشارژکیف پول",
+                        "url": "/financial/dechargewallet"
+                      }
+                    ],
+                    "icon": "monetization_on",
+                    "menuId": 12,
+                    "id": "walletCharge",
+                    "title": "شارژکیف پول",
+                    "type": "collapsable",
+                    "parentId": 11,
+                    "translate": "charging.wallet",
+                    "url": null
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [],
+                        "icon": "monetization_on",
+                        "menuId": 17,
+                        "id": "purchase",
+                        "title": "خرید",
+                        "type": "item",
+                        "parentId": 16,
+                        "translate": "purchase",
+                        "url": "/financial/purchasecredit"
+                      }
+                    ],
+                    "icon": "monetization_on",
+                    "menuId": 16,
+                    "id": "walletBuy",
+                    "title": "خرید",
+                    "type": "collapsable",
+                    "parentId": 11,
+                    "translate": "purchase",
+                    "url": null
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [],
+                        "icon": "send",
+                        "menuId": 46,
+                        "id": "walletToWallet",
+                        "title": "انتقال کیف به کیف",
+                        "type": "item",
+                        "parentId": 45,
+                        "translate": "انتقال کیف به کیف",
+                        "url": "/financial/wallet-to-wallet"
+                      }
+                    ],
+                    "icon": "send",
+                    "menuId": 45,
+                    "id": "transfer",
+                    "title": "انتقال",
+                    "type": "collapsable",
+                    "parentId": 11,
+                    "translate": "انتقال",
+                    "url": null
+                  }
+                ],
+                "icon": "monetization_on",
+                "menuId": 11,
+                "id": "walletactions",
+                "title": "عملیات مالی کیف پول",
+                "type": "collapsable",
+                "parentId": 1,
+                "translate": "wallet.financial.operations",
+                "url": null
+              },
+              {
+                "children": [
+                  {
+                    "children": [],
+                    "icon": "money_off",
+                    "menuId": 19,
+                    "id": "createSettlement",
+                    "title": "ایجاد تسویه حساب",
+                    "type": "item",
+                    "parentId": 18,
+                    "translate": "lbl.create.settlement",
+                    "url": "/financial/createsettlement"
+                  },
+                  {
+                    "children": [],
+                    "icon": "money_off",
+                    "menuId": 20,
+                    "id": "registerSettlement",
+                    "title": "ثبت تسویه حساب",
+                    "type": "item",
+                    "parentId": 18,
+                    "translate": "lbl.register.settlement",
+                    "url": "/financial/registersettlement"
+                  }
+                ],
+                "icon": "money_off",
+                "menuId": 18,
+                "id": "settlement",
+                "title": "تسویه",
+                "type": "collapsable",
+                "parentId": 1,
+                "translate": "lbl.settlement",
+                "url": null
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [],
+                        "icon": "report",
+                        "menuId": 23,
+                        "id": "balance",
+                        "title": "مانده کیف",
+                        "type": "item",
+                        "parentId": 22,
+                        "translate": "rest.wallet",
+                        "url": "/report/balance"
+                      },
+                      {
+                        "children": [],
+                        "icon": "report",
+                        "menuId": 24,
+                        "id": "balance",
+                        "title": "مانده کیف سازمانی",
+                        "type": "item",
+                        "parentId": 22,
+                        "translate": "organizational.wallet.balance",
+                        "url": "/report/balancewithsegment"
+                      }
+                    ],
+                    "icon": "report",
+                    "menuId": 22,
+                    "id": "reportBalance",
+                    "title": "مانده",
+                    "type": "collapsable",
+                    "parentId": 21,
+                    "translate": "remaining",
+                    "url": null
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [],
+                        "icon": "report",
+                        "menuId": 26,
+                        "id": "reportbillwallet",
+                        "title": "صورتحساب کیف پول",
+                        "type": "item",
+                        "parentId": 25,
+                        "translate": "report.wallet.billing",
+                        "url": "/report/reportbillwallet"
+                      },
+                      {
+                        "children": [],
+                        "icon": "report",
+                        "menuId": 27,
+                        "id": "reportbillsegmentwallet",
+                        "title": "صورتحساب کیف سازمانی",
+                        "type": "item",
+                        "parentId": 25,
+                        "translate": "report.corporate.wallet.billing",
+                        "url": "/report/reportbillsegmentwallet"
+                      }
+                    ],
+                    "icon": "report",
+                    "menuId": 25,
+                    "id": "reportBill",
+                    "title": "صورتحساب",
+                    "type": "collapsable",
+                    "parentId": 21,
+                    "translate": "bills",
+                    "url": null
+                  }
+                ],
+                "icon": "report",
+                "menuId": 21,
+                "id": "reportsMenu",
+                "title": "گزارشات",
+                "type": "collapsable",
+                "parentId": 1,
+                "translate": "reports",
+                "url": null
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [],
+                        "icon": "settings",
+                        "menuId": 30,
+                        "id": "segmentmanagement",
+                        "title": "مدیریت انواع جیب",
+                        "type": "item",
+                        "parentId": 29,
+                        "translate": "manage.segments",
+                        "url": "/conf/segmentmanagement"
+                      },
+                      {
+                        "children": [],
+                        "icon": "settings",
+                        "menuId": 31,
+                        "id": "productsegmentmanagement",
+                        "title": "مدیریت جیب های محصول",
+                        "type": "item",
+                        "parentId": 29,
+                        "translate": "manage.product.segment",
+                        "url": "/conf/productsegmentmanagement"
+                      },
+                      {
+                        "children": [],
+                        "icon": "settings",
+                        "menuId": 32,
+                        "id": "terminalsegmentmanagement",
+                        "title": "مدیریت جیب های مجاز ترمینال",
+                        "type": "item",
+                        "parentId": 29,
+                        "translate": "manage.authorized.terminal.wallet",
+                        "url": "/conf/terminalsegmentmanagement"
+                      }
+                    ],
+                    "icon": "settings",
+                    "menuId": 29,
+                    "id": "segmentBasicData",
+                    "title": "اطلاعات پایه جیب",
+                    "type": "collapsable",
+                    "parentId": 28,
+                    "translate": "basic.wallet.information",
+                    "url": null
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [],
+                        "icon": "settings",
+                        "menuId": 34,
+                        "id": "limitmanagement",
+                        "title": "محدودیت های روزانه",
+                        "type": "item",
+                        "parentId": 33,
+                        "translate": "manage.daily.restrictions",
+                        "url": "/conf/limitmanagement"
+                      },
+                      {
+                        "children": [],
+                        "icon": "settings",
+                        "menuId": 35,
+                        "id": "restrictmanagement",
+                        "title": "محدودیت های سرویس",
+                        "type": "item",
+                        "parentId": 33,
+                        "translate": "lbl.service.restrictions",
+                        "url": "/conf/restrictmanagement"
+                      }
+                    ],
+                    "icon": "settings",
+                    "menuId": 33,
+                    "id": "segmentBasicData",
+                    "title": "مدیریت محدودیت ها",
+                    "type": "collapsable",
+                    "parentId": 28,
+                    "translate": "manage.constraints",
+                    "url": null
+                  },
+                  {
+                    "children": [],
+                    "icon": "settings",
+                    "menuId": 36,
+                    "id": "wageManagement",
+                    "title": "مدیریت کارمزد",
+                    "type": "item",
+                    "parentId": 28,
+                    "translate": "wage.management",
+                    "url": "/conf/wagemanagement"
+                  },
+                  {
+                    "children": [],
+                    "icon": "settings",
+                    "menuId": 37,
+                    "id": "serviceManafement",
+                    "title": "مدیریت سرویسها",
+                    "type": "item",
+                    "parentId": 28,
+                    "translate": "services.management",
+                    "url": "/conf/servicemangement"
+                  }
+                ],
+                "icon": "settings",
+                "menuId": 28,
+                "id": "basicData",
+                "title": "پیکره بندی سامانه",
+                "type": "collapsable",
+                "parentId": 1,
+                "translate": "lbl.system.setting",
+                "url": null
+              },
+              {
+                "children": [
+                  {
+                    "children": [],
+                    "icon": "supervised_user_circle",
+                    "menuId": 43,
+                    "id": "changeUserPassword",
+                    "title": "تغییر کلمه عبور کاربر",
+                    "type": "item",
+                    "parentId": 38,
+                    "translate": "تغییر کلمه عبور کاربر",
+                    "url": "/user/change-user-pass"
+                  },
+                  {
+                    "children": [],
+                    "icon": "supervised_user_circle",
+                    "menuId": 42,
+                    "id": "roleMenuManagementChild",
+                    "title": "مدیریت منوهای نقش",
+                    "type": "item",
+                    "parentId": 38,
+                    "translate": "user.role.management",
+                    "url": "/user/menu-role-management"
+                  },
+                  {
+                    "children": [],
+                    "icon": "supervised_user_circle",
+                    "menuId": 39,
+                    "id": "userManagementChild",
+                    "title": "مدیریت کاربران",
+                    "type": "item",
+                    "parentId": 38,
+                    "translate": "user.management",
+                    "url": "/user/user-management"
+                  },
+                  {
+                    "children": [],
+                    "icon": "supervised_user_circle",
+                    "menuId": 40,
+                    "id": "personManagementChild",
+                    "title": "مدیریت اشخاص",
+                    "type": "item",
+                    "parentId": 38,
+                    "translate": "user.person.management",
+                    "url": "/user/person-management"
+                  },
+                  {
+                    "children": [],
+                    "icon": "supervised_user_circle",
+                    "menuId": 41,
+                    "id": "roleManagementChild",
+                    "title": "مدیریت نقش ها",
+                    "type": "item",
+                    "parentId": 38,
+                    "translate": "role.management",
+                    "url": "/user/role-management"
+                  }
+                ],
+                "icon": "supervised_user_circle",
+                "menuId": 38,
+                "id": "userManagement",
+                "title": "مدیریت کاربران",
+                "type": "collapsable",
+                "parentId": 1,
+                "translate": "user.management",
+                "url": null
+              }
+            ],
+            "icon": null,
+            "menuId": 1,
+            "id": "applications",
+            "title": "منوهای سامانه",
+            "type": "group",
+            "parentId": 0,
+            "translate": "منوهای سامانه",
+            "url": null
+          }
+        ]
+      }
+    }
+  }
+}

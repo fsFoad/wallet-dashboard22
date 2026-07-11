@@ -1,0 +1,67 @@
+﻿/* â”€â”€ Icon buttons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.wd-icon-btn {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--wd-border);
+  border-radius: var(--wd-radius-input);
+  background: var(--wd-card);
+  color: var(--wd-text);
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.wd-icon-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.wd-icon-btn:hover {
+  box-shadow: var(--wd-shadow);
+  transform: translateY(-1px);
+}
+
+.wd-icon-btn--ghost {
+  border: none;
+  background: transparent;
+  width: 32px;
+  height: 32px;
+}
+
+.wd-icon-btn--glass {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.wd-icon-btn--glass:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.wd-badge-dot {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--wd-danger);
+  border: 2px solid var(--wd-card);
+}
+
+.wd-lang-btn {
+  padding: 0;
+  overflow: hidden;
+}
+
+.wd-flag {
+  width: 22px;
+  height: 15px;
+  display: block;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(16, 24, 40, 0.08);
+}
+

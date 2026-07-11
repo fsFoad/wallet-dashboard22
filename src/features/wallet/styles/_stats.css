@@ -1,0 +1,47 @@
+﻿/* â”€â”€ Monthly stats â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.wd-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.wd-stat {
+  padding: 16px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid var(--wd-border);
+  transition: background 0.2s ease;
+}
+
+.wd-stat:hover {
+  background: #f2f7f7;
+}
+
+.wd-stat__label {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--wd-text-secondary);
+}
+
+.wd-stat__value {
+  margin: 8px 0 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.wd-stat__trend {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.wd-stat__trend--up {
+  color: var(--wd-success);
+}
+
+.wd-stat__trend--down {
+  color: var(--wd-danger);
+}
+

@@ -1,0 +1,42 @@
+﻿/* â”€â”€ Layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.wd-app {
+  display: flex;
+  min-height: 100vh;
+  background: var(--wd-bg);
+}
+
+.wd-sidebar {
+  width: var(--wd-sidebar-w);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  background: var(--wd-card);
+  border-inline-end: 1px solid var(--wd-border);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.wd-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.wd-content {
+  flex: 1;
+  padding: 0 var(--wd-page-pad) var(--wd-page-pad);
+  overflow: auto;
+}
+
+.wd-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.wd-scroll::-webkit-scrollbar {
+  display: none;
+}
+

@@ -1,0 +1,70 @@
+﻿/* â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+@media (max-width: 1400px) {
+  .wd-top-grid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+
+  .wd-top-grid .wd-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .wd-analytics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wd-card--wide {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wd-app {
+    flex-direction: column;
+  }
+
+  app-wallet-dashboard.wd-rtl .wd-app {
+    flex-direction: column;
+  }
+
+  .wd-sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid var(--wd-border);
+  }
+
+  .wd-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .wd-profile-card {
+    display: none;
+  }
+
+  .wd-top-grid,
+  .wd-analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wd-banner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .wd-banner__illus {
+    display: none;
+  }
+
+  .wd-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .wd-search {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
